@@ -1,6 +1,6 @@
 
 
-PROJECT_NAME := projectiot
+PROJECT_NAME := projectiot_client
 PROJECT_PATH := $(abspath .)
 PROJECT_BOARD := evb
 export PROJECT_PATH PROJECT_BOARD
@@ -19,11 +19,9 @@ NETWORK_FLAGS := \
 CFLAGS   += $(NETWORK_FLAGS)
 CPPFLAGS += $(NETWORK_FLAGS)
 CXXFLAGS += $(NETWORK_FLAGS)
-CFLAGS += -Wno-error=volatile -Wno-volatile
-CXXFLAGS += -Wno-error=volatile -Wno-volatile
 
-CFLAGS   += -Wno-error=unused-function -Wno-error=unused-parameter
-CXXFLAGS += -Wno-error=unused-function -Wno-error=unused-parameter
+CFLAGS   += -Wno-error=unused-function -Wno-error=unused-parameter -Wno-error
+CXXFLAGS += -Wno-error=unused-function -Wno-error=unused-parameter -Wno-error
 
 COMPONENTS_NETWORK := dns_server
 

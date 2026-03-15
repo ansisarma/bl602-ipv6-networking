@@ -1,8 +1,12 @@
+#pragma once
 
-#ifndef WIFI_H
-#define WIFI_H
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-#define WIFI_SSID "TEST"
-#define WIFI_PW   "12345678"
+void task_wifi(void* param);
+void task_udp_client(void* param);
 
+#ifdef __cplusplus
+}
 #endif

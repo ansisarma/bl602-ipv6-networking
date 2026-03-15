@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <lwip/err.h>
 #include <lwip/netif.h>
 
 #ifdef __cplusplus
@@ -7,17 +8,17 @@ extern "C" {
 
 void dhcpd_start(struct netif *netif)
 {
-   
-    printf("[DHCPD] FSM-compatible DHCP stub active\n");
     (void)netif;
+    printf("[DHCPD] Stub: dhcpd_start called (no DHCP server started)\r\n");
 }
 
-void dhcp_server_stop(struct netif *netif)
+err_t dhcp_server_stop(struct netif *netif)
 {
     (void)netif;
+    printf("[DHCPD] Stub: dhcp_server_stop called\r\n");
+    return ERR_OK;
 }
 
 #ifdef __cplusplus
 }
 #endif
-
